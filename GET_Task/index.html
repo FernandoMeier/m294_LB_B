@@ -4,23 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/frontend/main.css">
-    <script src="frontend.js"></script>
+    <link rel="stylesheet" href="/main.css">
+    <script src="script.js"></script>
     <title>Frontend M294</title>
 </head>
 <body>
-    <form id="taskForm">
-        <label for="identifierInput">Name oder ID</label>
-        <input type="text" name="identifier" id="identifierInput" autocomplete="off">
-        <button type="submit">Task suchen</button>
-    </form>
     <h2>Informationen zum Abgefragten</h2>
     <table>
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Taskname</th>
-                <th>Status</th>
+                <th>Titel</th>
+                <th>Erledigt Status</th>
             </tr>
         </thead>
         <tbody id="display">
