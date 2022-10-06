@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then(result => {
             if (result.ok) { alert("Your task was deleted successfully") }
-            else { alert("There was and error deleting your task, you ID may be invalid") }
+            else { alert("There was and error deleting your task, your ID may be invalid") }
             return result
         })
         .then(result => result.json())
