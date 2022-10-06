@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="update.js"></script>
+    <title>Edit a Task</title>
 </head>
 <body>
     <header>
@@ -15,5 +16,21 @@
             <a class="nav-link active" href="/DELETE_Task/index.html">Task löschen</a>
         </nav>
     </header>
+    <form id="taskForm">
+
+        <label for="identifier">ID der task</label>
+        <input type="text" name="id" id="identifier" autocomplete="off">
+    
+        <label for="taskInput">Neuer inhalt</label>
+        <input type="text" name="task" id="taskInput" autocomplete="off">
+
+        <label for="statusInput">Status</label>
+        <select name="status" id="statusInput">
+            <option value="false">Unerledigt</option>
+            <option value="true">Erledigt</option>
+        </select>
+
+        <button type="submit">Task hochladen</button>
+    </form>
 </body>
 </html>
