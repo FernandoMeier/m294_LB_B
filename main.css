@@ -2,3 +2,12 @@ form {
     display: flex;
     flex-direction: column;
 }
+
+html {
+    width: 100%;
+}
+
+table, th, td {
+    min-width: 100%;
+    border: 1px solid black;
+}

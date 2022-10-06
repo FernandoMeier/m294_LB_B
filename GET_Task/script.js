@@ -8,8 +8,7 @@ const addTask = (task) => {
     const display = document.getElementById("display");
     const tableRow = document.createElement("tr");
 
-    for(let inde = task.length; inde >= 0; inde--) {
-        inde--;
+    for(let inde = task.length - 1; inde >= 0; inde--) {
         tableRow.append(
             createCell(task[inde].id),
             createCell(task[inde].title),
