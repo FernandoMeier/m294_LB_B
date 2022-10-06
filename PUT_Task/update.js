@@ -12,7 +12,11 @@ function createTask(task) {
             "Content-Type": "application/json"
         } ,
         body: JSON.stringify(task)
-    }).then()
+    }).then(result => {
+        if (result.ok) { alert("Your task was updated successfully") }
+        else { alert("There was and error updating your task, your ID may be invalid") }
+        return result
+    })
 }
 
 const createCell = (cellText) => {
@@ -23,8 +27,7 @@ const createCell = (cellText) => {
 
 document.addEventListener("DOMContentLoaded", () => {
     const taskInput = document.getElementById("taskInput");
-    document.addEventListener("submit", event => {
-        event.preventDefault();
+    document.addEventListener("submit", () => {
         indexTask();
         createTask({title: taskInput.value, completed: document.getElementById("statusInput").value, id: document.getElementById("identifier").value})
     })

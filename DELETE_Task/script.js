@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const pokemonForm = document.getElementById("pokemonForm");
 
-    pokemonForm.addEventListener("submit", (event) => {
-        event.preventDefault();
+    pokemonForm.addEventListener("submit", () => {
         const pokemonFormData = new FormData(pokemonForm);
 
         fetch(`http://localhost:3000/task/${pokemonFormData.get("identifier")}`, {
