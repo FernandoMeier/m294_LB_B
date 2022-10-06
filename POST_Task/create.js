@@ -15,7 +15,7 @@ function createTask(task) {
         if(result.ok) {
             alert("task created successfully")
         } else {
-            alert("there was an creating the task")
+            alert("there was an error creating the task")
         }
         return result
     })

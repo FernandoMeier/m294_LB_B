@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const pokemonForm = document.getElementById("pokemonForm");
+    const taskForm = document.getElementById("taskForm");
 
-    pokemonForm.addEventListener("submit", () => {
-        const pokemonFormData = new FormData(pokemonForm);
+    taskForm.addEventListener("submit", () => {
+        const taskFormData = new FormData(taskForm);
 
-        fetch(`http://localhost:3000/task/${pokemonFormData.get("identifier")}`, {
+        fetch(`http://localhost:3000/task/${taskFormData.get("identifier")}`, {
             method: "DELETE",
             headers: {
                 'Content-type': 'application/json'
