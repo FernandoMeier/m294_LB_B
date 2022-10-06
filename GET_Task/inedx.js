@@ -3,6 +3,7 @@ function renderTask(tasks) {
     tasks.forEach((task) => {
         const tableRow = document.createElement("tr");
         tableRow.append(createCell(task.id))
+        tableBody.appendChild(tableRow)
     })
 }
 

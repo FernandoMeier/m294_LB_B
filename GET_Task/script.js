@@ -5,20 +5,19 @@ const createCell = (cellText) => {
 }
 
 const addTask = (task) => {
-    const display = document.getElementById("display");
-    const tableRow = document.createElement("tr");
 
-    for(let inde = task.length - 1; inde >= 0; inde--) {
+    for(let inde = 0; inde <= task.length - 1; inde++) {
+        const display = document.getElementById("display");
+        const tableRow = document.createElement("tr");
         tableRow.append(
             createCell(task[inde].id),
             createCell(task[inde].title),
             createCell(task[inde].completed)
         )
+        display.appendChild(tableRow);
     }
 
     
-
-    display.appendChild(tableRow);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
