@@ -1,0 +1,59 @@
+commit 7ae7f1c0845b204d0dbba959c0fa454c90c02148
+Author: Ferni <meierf@bzz.ch>
+Date:   Fri Oct 7 15:36:21 2022 +0200
+
+    feat: login function finished and grapics added
+
+commit 69ed40a879fc929c045557e32021d76d3565e292
+Author: Ferni <meierf@bzz.ch>
+Date:   Thu Oct 6 23:06:18 2022 +0200
+
+    feat: add login and structure
+
+commit 175ec962da56ea075341fe55c1ac6b87551ff55a
+Author: Ferni <meierf@bzz.ch>
+Date:   Thu Oct 6 21:19:18 2022 +0200
+
+    feat: add buttons for "multi-view" delete of tasks
+
+commit 7dc7f1b718738ac7ada892c1cb8af55745f1a920
+Author: Ferni <meierf@bzz.ch>
+Date:   Thu Oct 6 14:41:08 2022 +0200
+
+    feat: add PUT function for Updating tasks
+
+commit 307507c5bcec07256cddab61da50c97cd0d05d67
+Author: Ferni <meierf@bzz.ch>
+Date:   Thu Oct 6 11:43:59 2022 +0200
+
+    fix: fixed spelling
+
+commit 1a4d0f6fde3ecf9891559a9a6abea4938209559d
+Author: Ferni <meierf@bzz.ch>
+Date:   Thu Oct 6 11:39:55 2022 +0200
+
+    feat: add delete function
+
+commit 8b8d3dc216461cee23d11d1fbb91df4d8d55d770
+Author: Ferni <meierf@bzz.ch>
+Date:   Thu Oct 6 09:19:47 2022 +0200
+
+    feat: add POST function
+
+commit 0949bc7b4354192242a576a9f30712b9e75e6893
+Author: Ferni <meierf@bzz.ch>
+Date:   Wed Oct 5 21:27:06 2022 +0200
+
+    feat: dir for all main functions
+
+commit 1b6366938571742a230ac6ffed213fab8e2a15a6
+Author: Ferni <meierf@bzz.ch>
+Date:   Wed Oct 5 16:40:03 2022 +0200
+
+    feat: index updated
+
+commit f25448ad597d484948394896a08a4fa7c8a383fc
+Author: Ferni <meierf@bzz.ch>
+Date:   Wed Oct 5 15:36:09 2022 +0200
+
+    initial commit
