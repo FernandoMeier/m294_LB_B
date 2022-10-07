@@ -21,4 +21,4 @@ Zuerst muss man sich mit einer beliebigen Email und dem Passwort `m294` anmelden
 * <ins>node webserver</ins>
 * <ins>VS Code Lifeview</ins>
 
-## Testprotokol und Fälle unter Test.md
+## Testprotokol und log unter Test.md
