@@ -1,0 +1,31 @@
+Testfall:                 1 
+Tester:                   Getestet von Fernando
+Testfall:                 Neue Task erstellen durch POST Funktion
+Testdaten:                New Task
+Auszuführende Schritte:   task schreiben, task uploaden
+Erwartetes Ergebnis:      Task namens "New Task" erstellt
+Tatsächliches Ergebnis:   Task namens "New Task" erstellt
+
+Testfall:                 2
+Tester:                   Getestet von Fernando
+Testfall:                 Bestehende Task editieren durch PUT Funktion
+Testdaten:                task id 2
+Auszuführende Schritte:   task schreiben, task aktualisieren
+Erwartetes Ergebnis:      Task namens "New Task" aktualisieren
+Tatsächliches Ergebnis:   Task namens "New Task" aktualisieren
+
+Testfall:                 3
+Tester:                   Getestet von Fernando
+Testfall:                 Bestehende Task löschen durch DELETE Funktion
+Testdaten:                task id 2
+Auszuführende Schritte:   id schreiben, task löschen
+Erwartetes Ergebnis:      Task namens "New Task" gelöscht
+Tatsächliches Ergebnis:   Task namens "New Task" gelöscht
+
+Testfall:                 4
+Tester:                   Getestet von Fernando
+Testfall:                 Bestehende Task anzeigen durch GET Funktion
+Testdaten:                (optional: id)
+Auszuführende Schritte:   (task suchen falls in einzelansicht, ) task anzeigen
+Erwartetes Ergebnis:      Task namens "New Task" angezeigt
+Tatsächliches Ergebnis:   Task namens "New Task" angezeigt
