@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }).then((response) => {
         if(response.status < 300) {
           window.location.href = "/menu/index.html";
+        } else {
+          alert("falsches PW")
         }
       })
     });

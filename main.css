@@ -39,10 +39,11 @@ th {
 h1, h2 {
     width:fit-content;
     margin: auto;
+    color: white;
 }
 
 body {
-    background-color: rgb(83, 83, 83);
+    background-color: rgba(83, 83, 83, 0.71);
     margin: 2% auto;
     max-width: 80%;
     min-height: 90%;
@@ -88,4 +89,18 @@ ul {
 
   input {
     background-color: whitesmoke;
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  #delete {
+    border-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  #edit {
+    border-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0);
   }

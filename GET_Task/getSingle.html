@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <title>Pokedex</title>
+
+    <script>
+
+        const createCell = (cellText) => {
+            const cell = document.createElement("td");
+            cell.innerHTML = cellText;
+            return cell
+        }
+
+        const addTask = (task) => {
+            const display = document.getElementById("display");
+            const tablerow = document.createElement("tr");
+            
+            tablerow.append(
+                createCell(task.id),
+                createCell(task.title),
+                createCell(task.completed),
+                createCell(`<button type="button" id="delete" onClick="onDelete(${task.id})"><img src="/imgs/icons8-unwiederuflich-löschen-48.png" alt=""></button>`),
+                createCell(`<button type="button" id="edit" onClick="onEdit(${task.id})"><img src="/imgs/icons8-edit-48.png" alt=""></button>`)
+            )
+
+            display.appendChild(tablerow)
+        }
+
+    function onDelete(deleteID) {
+        const id = deleteID;
+        fetch(`http://127.0.0.1:3000/auth/cookie/task/${id}`, {
+        method: "DELETE",
+        credentials: "include",
+        headers: {"Content-Type":"application/json"}
+        }).then(result => {
+            if (result.ok) { alert("Your task was deleted successfully") }
+            else { alert("There was and error deleting your task, your ID may be invalid") }
+            return result
+        })
+        .then(result => result.json())
+        .then(data => console.log(data))
+        .catch(error => console.log(error));
+        location.reload();
+    }
+
+    function onEdit(EditID) {
+        const newInfo = {title: `${prompt("Neuer Inhalt")}`, completed: `${prompt("Erledigt?", "true oder false")}`, id: EditID};
+        fetch(`http://127.0.0.1:3000/auth/cookie/tasks`, {
+        method: "PUT",
+        credentials: "include",
+        headers: {"Content-Type":"application/json"},
+        body: JSON.stringify(newInfo)
+        }).then(result => {
+            if (result.ok) { alert("Your task was updated successfully") }
+            else { alert("There was and error deleting your task, your ID may be invalid") }
+            return result
+        })
+        .then(result => result.json())
+        .then(data => console.log(data))
+        .catch(error => console.log(error));
+        location.reload();
+    }
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const taskForm = document.getElementById("taskForm");
+
+            taskForm.addEventListener("submit", () => {
+                event.preventDefault();
+                const taskFormData = new FormData(taskForm);
+
+                fetch(`http://127.0.0.1:3000/auth/cookie/task/${taskFormData.get("identifier")}`, {
+                    credentials: "include"
+                })
+                    .then((response) => {
+                        if(response.status === 404) {
+                            alert("task not found")
+                        }
+                        return response.json();
+                    })
+                    .then((data) => {
+                        addTask(data)
+                    })
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Liste aller tasks</h1>
+        <ul>
+            <li><a class="nav-link active" href="/menu/index.html">Menu</a></li>
+            <li><a class="nav-link active" href="/DELETE_Task/index.html">Task löschen</a></li>
+            <li><a class="nav-link active" href="/POST_Task/index.html">Task hochladen</a></li>
+            <li><a class="nav-link active" href="/PUT_Task/index.html">Task editieren</a></li>
+            <li><a class="nav-link active" href="/GET_Task/index.html">Tasks anzeigen</a></li>
+        </ul>
+    </header>
+
+    <form id="taskForm">
+        <br>
+        <label for="identifierInput">Name oder ID</label>
+        <input type="text" name="identifier" id="identifierInput" autocomplete="off">
+        <button type="submit">Abfrage start</button>
+    </form>
+    <br>
+    <h2>Informationen zum Abgefragten</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Erledigt</th>
+                <th>Löschen</th>
+                <th>Editieren</th>
+            </tr>
+        </thead>
+        <tbody id="display">
+
+        </tbody>
+    </table>
+</body>
+</html>

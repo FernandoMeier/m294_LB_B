@@ -4,8 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
     taskForm.addEventListener("submit", () => {
         const taskFormData = new FormData(taskForm);
 
-        fetch(`http://localhost:3000/task/${taskFormData.get("identifier")}`, {
+        fetch(`http://127.0.0.1:3000/auth/cookie/task/${taskFormData.get("identifier")}`, {
             method: "DELETE",
+            credentials: "include",
             headers: {
                 'Content-type': 'application/json'
             }

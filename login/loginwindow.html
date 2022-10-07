@@ -5,23 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
-    <script src="login.js"></script>
+    <script src="script.js"></script>
     <title>Loginpage</title>
 </head>
 <body>
-    <div>
+    <div class="hidden" id="notLoggedIn">
         <h1>Login form</h1>
 
-        <form id="loginForm">
-            <label for="taskInput">Email: </label>
-            <input type="email" name="email" id="EmailInput" autocomplete="off">
+        <form id="login">
+            <label for="email_input">Email</label>
+            <input type="email" name="email" id="email_input">
 
-            
-            <label for="taskInput">Passwort: </label>
-            <input type="password" name="password" id="PwInput" autocomplete="off">
-            <br>
+            <label for="password_input">Password</label>
+            <input type="password" name="password" id="password_input">
 
-            <button type="submit">Log in to Page</button>
+            <button type="submit">Login</button>
         </form>
     </div>
 </body>
